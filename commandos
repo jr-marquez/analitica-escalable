@@ -1,0 +1,8 @@
+pip3 install pyspark
+
+docker exec spark-master /bin/sh -c "cd /course;spark-submit ratings-counter.py"
+docker exec spark-master /bin/sh -c "cd /course;spark-submit friends-by-age.py"
+docker exec spark-master /bin/sh -c "cd /course;spark-submit quick_intro.py"
+docker exec spark-master /bin/sh -c "cd /course;spark-submit friends-by-age-dataframe.py"
+docker exec spark-master /bin/sh -c "cd /course;spark-submit structured-streaming.py"
+docker exec spark-master /bin/sh -c "cd /course;spark-submit example_pipelineWeight.py"
