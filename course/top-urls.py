@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 import pyspark.sql.functions as func
 
-spark = SparkSession.builder.appName("StructuredStreaming").master("spark://spark-master:7077").getOrCreate()
+spark = SparkSession.builder.appName("StructuredStreaming").getOrCreate()
 
 # Monitor the logs directory for new log data, and read in the raw lines as accessLines
 accessLines = spark.readStream.text("/course/datasets/logs")
@@ -25,8 +25,10 @@ logsDF = accessLines.select(func.regexp_extract('value', hostExp, 1).alias('host
 logsDF2 = logsDF.withColumn("eventTime", func.current_timestamp())
 
 # Keep a running count of endpoints
-endpointCounts = logsDF2.groupBy(func.window(func.col("eventTime"), \
-      "30 seconds", "10 seconds"), func.col("endpoint")).count()
+endpointCounts = logsDF2.groupBy(
+    func.window(logsDF2.eventTime, "20 seconds", "5 seconds"),
+    logsDF2.endpoint
+).count()
 
 sortedEndpointCounts = endpointCounts.orderBy(func.col("count").desc())
 
