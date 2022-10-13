@@ -4,8 +4,8 @@ from pyspark.ml.feature import Imputer,VectorAssembler
 
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder.appName("PipelineExample").master("spark://spark-master:7077").config("spark.driver.memory", "1g").getOrCreate()
-
+#spark = SparkSession.builder.appName("PipelineExample").master("spark://spark-master:7077").config("spark.driver.memory", "1g").getOrCreate()
+spark = SparkSession.builder.appName("PipelineExample").getOrCreate()
 file_type = spark.read.option("header", "true").option("inferSchema", "true").csv("file:///course/datasets/heights_weights.csv")
 
 # Configure an ML pipeline
@@ -19,7 +19,7 @@ pipeline = Pipeline(stages=[imputer, assembler, lr])
 
 # Fit the pipeline to training .
 model = pipeline.fit(file_type)
-
+#model.save("/course/datasets/model")
 # Prepare test values
 test = spark.createDataFrame([
     (67,172),

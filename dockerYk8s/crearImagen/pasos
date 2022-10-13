@@ -1,0 +1,12 @@
+#creando imagen
+docker build . -t <dockerid>/<nombreproyecto>:<version>
+docker build . -t ramongo/redis_master:latest
+docker run <imagen> 
+docker run ramongo/redis_master:latest 
+
+
+docker build . -t ramongo/simple_web:latest
+docker run -p 8080:8080 ramongo/simple_web:latest
+
+
+docker-compose up --build
