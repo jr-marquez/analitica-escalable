@@ -1,3 +1,2 @@
-course/datasets/**/**
-course/datasets/ml-25m/genome-scores.csv
+course/datasets/ml-100k
 course/datasets/ml-25m/ratings.csv
