@@ -7,7 +7,7 @@ from pyspark.sql import SparkSession
 
 
 spark = SparkSession.builder.appName("hyperparameters").getOrCreate()
-# Prepare training documents, which are labeled.
+# Prepare training documents, which are labeled. We are looking for spark :)
 training = spark.createDataFrame([
     (0, "a b c d e spark", 1.0),
     (1, "b d", 0.0),

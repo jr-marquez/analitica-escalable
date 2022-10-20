@@ -1,5 +1,6 @@
 from __future__ import print_function
 
+#trabajan mucho mejor con features en diferentes escalas
 from pyspark.ml.regression import DecisionTreeRegressor
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
@@ -25,6 +26,7 @@ if __name__ == "__main__":
     testDF = trainTest[1]
 
     # Now create our decision tree
+    #si ven no hemos usado hyperparameters....se pueden usar o no
     dtr = DecisionTreeRegressor().setFeaturesCol("features").setLabelCol("PriceOfUnitArea")
 
     # Train the model using our training data

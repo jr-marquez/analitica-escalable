@@ -8,7 +8,6 @@ services:
       - "7077:7077"
     volumes:
        - ./course:/course
-
     environment:
       - SPARK_LOCAL_IP=spark-master
       - SPARK_WORKLOAD=master

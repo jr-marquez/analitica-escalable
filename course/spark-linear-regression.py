@@ -15,6 +15,9 @@ if __name__ == "__main__":
     data = inputLines.map(lambda x: x.split(",")).map(lambda x: (float(x[0]), Vectors.dense(float(x[1]))))
 
     # Convert this RDD to a DataFrame
+    #label es lo que queremos predecir (y) y feature lo que sabemos (x)
+    #recordar normalizar los datos. 
+    #En este caso tenemos solo un feature pero con Vectors se pueden poner más
     colNames = ["label", "features"]
     df = data.toDF(colNames)
 
@@ -28,6 +31,7 @@ if __name__ == "__main__":
     testDF = trainTest[1]
 
     # Now create our linear regression model
+    # There you can see the hyperparameter
     lir = LinearRegression(maxIter=10, regParam=0.3, elasticNetParam=0.8)
 
     # Train the model using our training data
