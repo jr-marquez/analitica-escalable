@@ -19,9 +19,12 @@ assembler = VectorAssembler(inputCols=["out_Height", "out_Weight"],outputCol="fe
 lr = LogisticRegression(featuresCol='features',labelCol="Male",maxIter=10, regParam=0.001)
 pipeline = Pipeline(stages=[imputer, assembler, lr])
 
+
 # Fit the pipeline to training .
 model = pipeline.fit(file_type)
+
 #model.save("/course/datasets/model")
+
 # Prepare test values
 test = spark.createDataFrame([
     (67,172),

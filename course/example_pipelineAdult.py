@@ -12,7 +12,7 @@ trainDF.cache().count() # Cache because accessing training data multiple times, 
 
 categoricalCols = ["workclass", "education", "marital_status", "occupation", "relationship", "race", "sex"]
 
-# The following two lines are estimators. They return functions that we will later apply to transform the dataset.
+# The following two lines are transformers. They return functions that we will later apply to transform the dataset.
 stringIndexer = StringIndexer(inputCols=categoricalCols, outputCols=[x + "Index" for x in categoricalCols]) 
 encoder = OneHotEncoder(inputCols=stringIndexer.getOutputCols(), outputCols=[x + "OHE" for x in categoricalCols]) 
 
