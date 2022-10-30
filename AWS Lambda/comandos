@@ -1,0 +1,52 @@
+aws cli install
+install sam
+aws configure
+sam init
+elegir hello world , explicar estructura
+el body : event.json
+cloud foundation services--> template.yaml
+
+luego ver el 
+sam build 
+va a los requirenments a buscar las dependencias
+mostrar los builds.
+
+luego
+sam deploy --guided
+contar los output
+ir a aws;
+lambda
+cloud formation-->contar un poco las ventanas
+trigger and test
+ir a lambada y mostrar el apigateway, mostrar la url y el output block que dice tambien el valor
+
+mostrar como cambiar el app.py
+mostrar como cambiar template.yaml (quitar output y events y la parte de arriba)
+
+sam build
+
+mostar el samconfig.toml
+
+sam build
+
+mostrar como se pueden generar eventos.
+
+def myhandler(event, context):
+    return "hello "+event
+
+explicar template.yaml:
+  se define todo en resources, sqs, apigatewayetc
+  template anatomy --> google, explicar global block (todas las funicones)
+  lo mandatory es transform y resources. 
+
+sam validate --> valida el template
+
+
+borrar stack --> mostrar cloud formation
+aws cloudformation delete-stack --stack-name myfirstapp
+
+
+vamos a crear asyncronos
+s3 (1) a sns (otra)
+mostrar bucket s3 --> vamos a usar SAN en vez de event notification
+con sam init hellow woorld y recambiamos 

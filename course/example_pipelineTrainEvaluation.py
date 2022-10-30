@@ -19,8 +19,8 @@ train.show(5)
 paramGrid = ParamGridBuilder()\
     .addGrid(lr.regParam, [0.1, 0.01]) \
     .addGrid(lr.fitIntercept, [False, True])\
-    .addGrid(lr.elasticNetParam, [0.0, 0.5, 1.0])\
-    .build()
+    .addGrid(lr., [0.0, 0.5, 1.0])\
+    .build()elasticNetParam
 
 # In this case the estimator is simply the linear regression.
 # A TrainValidationSplit requires an Estimator, a set of Estimator ParamMaps, and an Evaluator.

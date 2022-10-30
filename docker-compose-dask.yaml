@@ -1,8 +1,8 @@
 version: "3.3"
 services:
-  spark-master:
+  jupyterdask:
     image: jupyterdask:1.0
-    container_name: dask-complete
+    container_name: jupyterdask
     ports:
       - "8888:8888"
     volumes:

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    # aqui estoy especificando que haga el build directamente, es como un run
+    build: .
+    ports:
+      - '4001:8081'

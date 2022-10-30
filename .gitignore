@@ -3,6 +3,8 @@ course/datasets/logs
 course/datasets/ml-25m/ratings.csv
 course/datasets/ml-25m/*
 commandos
-dockerYk8s
 kubeflow
 PEC1
+MLenContainers/
+MLenProd/
+env/

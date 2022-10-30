@@ -1,0 +1,20 @@
+pip install flask
+crear archivos y luego :
+docker build -t imagetest .
+docker images --all
+docker run --name testcontainer -p 5000:5000 imagetest
+docker exec -it testcontainer /bin/sh
+docker logs
+
+docker hub:
+docker login
+creamos repo en docker hub
+ramongo/testimage
+docker image ls  --> sacamos imagetest
+docker tag imagetest ramongo/testimage:1.0
+docker push ramongo/testimage:1.0
+docker pull <ejemplos de otros contenedores>
+update una imagen, como se hace...tocar requirenemtnes y retagear
+extender imagenes, explicar concepto
+
+docker run -d -p 80:80 testauto:1

@@ -1,0 +1,14 @@
+[
+	{
+		"firstName":"Ramon", 
+		"middleName":"Juan", 
+		"lastName":"Marquez", 
+		"ssn": "123456789" 
+	},
+	{
+		"firstName":"Diego", 
+		"middleName":"Jorge", 
+		"lastName":"Perez", 
+		"ssn": "123456781"
+	}
+]
