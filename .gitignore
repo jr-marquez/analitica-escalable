@@ -6,5 +6,9 @@ commandos
 kubeflow
 PEC1
 MLenContainers/
-MLenProd/
 env/
+MLenProd/PythonPackage
+MLenProd/testRamon
+MLenProd/Diagrama.jpeg
+MLenProd/ServingAPI/house-prices-api
+MLenProd/ServingAPI/gender-api
