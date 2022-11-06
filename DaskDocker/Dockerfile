@@ -12,9 +12,10 @@ RUN apt-get update \
     && apt-get install -y openjdk-8-jre \
     && echo "Installed openjdk 8"
     
-# Install Dask complete and dask ml
-RUN pip install "dask[complete]"
-RUN pip install dask-ml
+# Install plugins
+COPY . .
+RUN pip install -r requirements.txt
+
 
 # Let's change to  "$NB_USER" command so the image runs as a non root user by default
 USER $NB_UID

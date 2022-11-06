@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template, session, redirect, u
 import requests
 import pandas as pd
 import numpy as np
-import joblib
 from my_model.predict import make_prediction
 
 

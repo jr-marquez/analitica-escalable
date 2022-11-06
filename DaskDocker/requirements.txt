@@ -1,0 +1,7 @@
+numpy
+pandas
+joblib
+sklearn
+pandas-profiling
+autoviz
+autokeras

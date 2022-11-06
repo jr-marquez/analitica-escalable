@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  jupyter:
+    image: ramongo/automl:1
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+       - ./AutoML:/course
