@@ -8,7 +8,7 @@
 
 from pyspark import SparkConf, SparkContext
 
-conf = SparkConf().setMaster("local").setAppName("FriendsByAge")
+conf = SparkConf().setMaster("spark://spark-master:7077").setAppName("FriendsByAge")
 sc = SparkContext(conf = conf)
 
 def parseLine(line):

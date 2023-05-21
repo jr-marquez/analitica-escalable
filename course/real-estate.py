@@ -8,7 +8,7 @@ from pyspark.ml.feature import VectorAssembler
 if __name__ == "__main__":
 
     # Create a SparkSession 
-    spark = SparkSession.builder.appName("DecisionTree").getOrCreate()
+    spark = SparkSession.builder.master("spark://spark-master:7077").appName("DecisionTree").getOrCreate()
 
     
     # Load up data as dataframe

@@ -36,6 +36,10 @@ sortedEndpointCounts = endpointCounts.orderBy(func.col("count").desc())
 query = sortedEndpointCounts.writeStream.outputMode("complete").format("console") \
       .queryName("counts").start()
 
+#query = sortedEndpointCounts.select(func.col("window")).writeStream.outputMode("complete").format("console") \
+#      .queryName("counts").start()
+
+
 # Wait until we terminate the scripts
 query.awaitTermination()
 
