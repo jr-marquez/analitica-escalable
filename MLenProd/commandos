@@ -1,0 +1,29 @@
+EXPLICAR TOX
+tox -r recrea entornos
+pip install tox
+tox -e test_package
+tox -e train ---> MOSTRAR EL RESULTADO
+
+tox  --> ejecuta todos los entornos
+#config files siempre en yaml porque es más facil que configurar , lo puede editar cualquier persona sin conociientos de python.
+
+
+probar configs con int y pasar tox -e train
+
+python3 -m pip install --upgrade pip
+
+pyproject.toml siempre hay plantillas
+setup.py es el que empaqueta...
+MANIFEST.in me dice que meto en el paquete y que no
+https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives
+python3 -m pip install --upgrade pip
+python3 -m build
+dist ver.... lo bueno en el whl
+
+pip install tid_my_model-0.0.1-py3-none-any.whl
+
+
+ver api
+tox -e run
+mostrar demo de FastAPI
+pip ---> mandar el paquete a pip--paquetes

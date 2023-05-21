@@ -1,7 +1,6 @@
 course/datasets/logs
 course/datasets/ml-25m/ratings.csv
 course/datasets/ml-25m/*
-commandos
 kubeflow
 PEC1
 MLenContainers/
