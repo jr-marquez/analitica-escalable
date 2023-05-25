@@ -10,6 +10,7 @@ file_type = spark.read.option("header", "true").option("inferSchema", "true").cs
 
 # Configure an ML pipeline
 # 2 Transformers
+#cambia NaNs por valores, ver https://spark.apache.org/docs/latest/ml-features#imputer
 imputer = Imputer(inputCols=["Height","Weight"], outputCols=["out_Height", "out_Weight"])
 
 #is important to mention that spark models recieve a vector (unique column with values)

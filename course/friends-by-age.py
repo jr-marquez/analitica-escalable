@@ -29,8 +29,8 @@ totalsByAge = rdd.mapValues(lambda x: (x, 1)).reduceByKey(lambda x, y: (x[0] + y
 #(33,(387,2))-->(33,193.5)
 averagesByAge = totalsByAge.mapValues(lambda x: x[0] / x[1])
 
-
 rows = averagesByAge.collect()
+
 for row in rows:
     age,friends=row #es como decir age=row[0] y friends=row[1]
     print( "(age=%s,friends=%s)" % (
