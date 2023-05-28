@@ -13,8 +13,9 @@ RUN apt-get update \
     && echo "Installed openjdk 8"
     
 # Install plugins
-COPY . .
-RUN pip install -r requirements.txt
+COPY requirements.txt /
+RUN pip install "dask[complete]"
+RUN pip install -r /requirements.txt
 
 
 # Let's change to  "$NB_USER" command so the image runs as a non root user by default

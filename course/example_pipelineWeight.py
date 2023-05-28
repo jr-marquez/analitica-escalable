@@ -11,13 +11,18 @@ file_type = spark.read.option("header", "true").option("inferSchema", "true").cs
 # Configure an ML pipeline
 # 2 Transformers
 #cambia NaNs por valores, ver https://spark.apache.org/docs/latest/ml-features#imputer
-imputer = Imputer(inputCols=["Height","Weight"], outputCols=["out_Height", "out_Weight"])
 
+imputer = Imputer(inputCols=["Height","Weight"], outputCols=["out_Height", "out_Weight"])
 #is important to mention that spark models recieve a vector (unique column with values)
+
 assembler = VectorAssembler(inputCols=["out_Height", "out_Weight"],outputCol="features")
+
+
+
 
 #1 Estimator
 lr = LogisticRegression(featuresCol='features',labelCol="Male",maxIter=10, regParam=0.001)
+
 pipeline = Pipeline(stages=[imputer, assembler, lr])
 
 

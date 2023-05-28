@@ -3,6 +3,8 @@ docker build . -t cluster-apache-spark:3.3.0 --> crea imagen con nombre cluster-
 En el directorio raiz: 
 docker-compose -f docker-compose-spark.yaml up -d --> ejecuta varios containers y crea una unica red interna. Esto se define dentro del archivo de Docker Compose (herramienta que facilita la vida)
 docker-compose -f docker-compose-spark.yaml down -v --> detenemos los contenedores y borramos cualquier volumen temporal
-
-docker tag 11a2db475710 ramongo/cluster-apache-spark:3.3.0
-docker push ramongo/cluster-apache-spark:3.3.0
+Dentro de la carpeta DaskDocker-Jupyter:
+docker build . -t jupyterdask:1.0
+Luego en el directorio raiz:
+docker-compose -f docker-compose-dask.yaml up -d 
+docker logs dask-complete --> accedemos a la url que aparece 

@@ -17,3 +17,5 @@ MLenProd/ML_Package/.tox/
 MLenProd/ServingAPI/.DS_Store
 PEC2.pdf
 course/titanic.csv
+FlinkDocker
+docker-compose-flink.yaml

@@ -13,7 +13,3 @@ docker exec spark-master /bin/sh -c "cd /course;spark-submit example_pipelineWei
 docker exec spark-master /bin/sh -c "cd /course;spark-submit model_selection.py"
 docker exec spark-master /bin/sh -c "cd /course;spark-submit example_pipelineAdult.py"
 docker exec spark-master /bin/sh -c "cd /course;spark-submit example_pipelineTrainEvaluation.py"
-
-
-Dask
-docker-compose -f docker-compose1.yml -f docker-compose2.yml up --build

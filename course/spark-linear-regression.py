@@ -44,7 +44,9 @@ if __name__ == "__main__":
 
     # Extract the predictions and the "known" correct labels.
     predictions = fullPredictions.select("prediction").rdd.map(lambda x: x[0])
+
     labels = fullPredictions.select("label").rdd.map(lambda x: x[0])
+  
 
     # Zip them together
     predictionAndLabel = predictions.zip(labels).collect()
