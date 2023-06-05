@@ -16,7 +16,7 @@ def home():
 @app.route('/result/<int:weight>/<int:height>', methods = ['GET','POST'])
 def result(weight,height):
     # Put inputs to dataframe
-    model_rf = joblib.load("cfk.pkl")
+    model_rf = joblib.load("test.pkl")
     X = pd.DataFrame([[height, weight]], columns = ["Height", "Weight"])
     # Get prediction
     prediction = model_rf.predict(X)[0]
