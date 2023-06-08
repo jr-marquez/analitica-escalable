@@ -4,4 +4,4 @@ numpy
 pandas
 joblib
 sklearn
-analitica-test
+ramonML

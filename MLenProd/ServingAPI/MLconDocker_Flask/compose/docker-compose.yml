@@ -1,6 +1,6 @@
 version: '3'
 services:
   flask-ml:
-    image: 'ramongo/mltest'
+    image: 'ramongo/mlramon:1.0'
     ports:
       - '5000:5000'
