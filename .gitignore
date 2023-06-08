@@ -7,6 +7,7 @@ MLenContainers/
 env/
 MLenProd/PythonPackage
 MLenProd/testRamon
+MLenProd/testClase
 MLenProd/Diagrama.jpeg
 MLenProd/ServingAPI/house-prices-api
 MLenProd/ServingAPI/gender-api
@@ -14,6 +15,7 @@ entregas/
 Examen/
 MLenProd/ML_Package/.DS_Store
 MLenProd/ML_Package/.tox/
+MLenProd/escondido
 MLenProd/ServingAPI/.DS_Store
 PEC2.pdf
 course/titanic.csv

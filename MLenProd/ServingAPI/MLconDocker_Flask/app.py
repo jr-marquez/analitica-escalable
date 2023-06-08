@@ -17,7 +17,7 @@ def home():
         # Put inputs to dataframe
         X = pd.DataFrame([[height, weight,age,country]], columns = ["Height", "Weight","Age","Country"])
         # Get prediction
-        prediction = make_prediction(X)
+        prediction = make_prediction(input_data=X)
     else:
         prediction = ""
     if prediction == 1:

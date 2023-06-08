@@ -4,4 +4,4 @@ numpy
 pandas
 joblib
 sklearn
-tid-my-model2==0.0.3
+analitica-test

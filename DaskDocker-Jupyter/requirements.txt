@@ -6,3 +6,4 @@ pandas-profiling
 autoviz
 autokeras
 dask-ml
+feature-engine
