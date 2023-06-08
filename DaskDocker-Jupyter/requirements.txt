@@ -1,9 +1,5 @@
 numpy
 pandas
 joblib
-sklearn
-pandas-profiling
-autoviz
-autokeras
-dask-ml
+scikit-learn
 feature-engine
