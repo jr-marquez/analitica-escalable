@@ -3,3 +3,5 @@ pandas
 joblib
 scikit-learn
 feature-engine
+pandas-profiling
+autokeras

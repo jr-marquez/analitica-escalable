@@ -14,7 +14,6 @@ RUN apt-get update \
     
 # Install plugins
 COPY requirements.txt /
-RUN pip install "dask[complete]"
 RUN pip install -r /requirements.txt
 
 

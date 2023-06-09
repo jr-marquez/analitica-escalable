@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  dask-complete:
+    image: ramongo/notebook:1
+    container_name: notebook
+    ports:
+      - "8888:8888"
+    volumes:
+       - ./course:/course

@@ -1,0 +1,8 @@
+numpy
+pandas
+joblib
+scikit-learn
+feature-engine
+ydata-profiling
+autokeras==1.0.20
+ipywidgets
