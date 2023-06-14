@@ -3,5 +3,6 @@ pandas
 joblib
 scikit-learn
 feature-engine
-pandas-profiling==
-autokeras
+ydata-profiling
+autokeras==1.0.20
+ipywidgets
